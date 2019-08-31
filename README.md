@@ -1,5 +1,5 @@
 # Before running the code
-Save the files _sentences.train_, _sentences.eval_ and _sentences_test.txt_ into the directory _data/_.
+Download the preprocessed training file [sentences.train](https://www.icloud.com/iclouddrive/0fZUO7iKl9A5QdQinOLa2voGQ#sentences) and save it to the directory _data/_.
 
 # Create word2index dictionary
 This operation is time and memory consuming and therefore should be run once before starting with training and adjusting the code. Running
