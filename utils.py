@@ -13,12 +13,12 @@ def get_w2i(vocab_size, training_file, out_dir, save = True):
     '''
 
     #assign <bos>, <eos>, <unk> and <pad> to the first four indices
-    w2i = ['<bos>','<eos>','<unk>','<pad>']
+    w2i_default = ['<bos>','<eos>','<unk>','<pad>']
 
     print('Reading training file and counting words...')
-    data = pd.read_csv(training_file)
+    # data = pd.read_csv(training_file)
     counts = {}
-    for _, row in data.iterrows():
+    for row in training_file:
 
         tokens = row.split() #creates list of tokens present at current row
 
@@ -36,7 +36,8 @@ def get_w2i(vocab_size, training_file, out_dir, save = True):
         num_counts.append(val)
 
     sorted_tokens = [token for _, token in sorted(zip(num_counts, all_tokens), reverse = True)]
-
+    
+    w2i = w2i_default.copy()
     for id, token in enumerate(sorted_tokens[0:vocab_size - len(w2i_default)]):
         w2i.append(token)
 

@@ -2,7 +2,6 @@ import argparse
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
-from trainer import train, evaluate, continuation
 from utils import get_w2i
 
 FILE_TRAIN = 'data/sentences.train'
@@ -47,12 +46,14 @@ if __name__ == "__main__":
 
     if FLAGS.word2index:
         get_w2i(FLAGS.vocab_size, open(FILE_TRAIN,'r'), FLAGS.out_dir)
+    else:
+        from trainer import train, evaluate, continuation
 
-    if FLAGS.evaluate:
-        evaluate(FLAGS)
+        if FLAGS.evaluate:
+            evaluate(FLAGS)
 
-    if FLAGS.train:
-        train(FLAGS)
+        if FLAGS.train:
+            train(FLAGS)
 
-    if FLAGS.continuation:
-        continuation(FLAGS)
+        if FLAGS.continuation:
+            continuation(FLAGS)
