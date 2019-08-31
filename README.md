@@ -11,7 +11,7 @@ python main.py -w
 will save the word2index dictionary into the folder _out/_.
 
 # Explore the trained model
-The trained model from experiment C (see below) is saved in the directory _out/C/_. The file [jupyter notebook](./continuation.ipynb) contains examples of completed sentences.
+The trained model from experiment C (see below) is saved in the directory _out/C/_. This [jupyter notebook](./continuation.ipynb) contains examples of completed sentences.
 
 # Train the model
 To train the network including embedding layer for the default of 30000 iterations, batch size 64, hidden state size 512 and vocabulary size 20000 (experiment A), run
