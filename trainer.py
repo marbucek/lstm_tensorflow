@@ -8,7 +8,7 @@ import time
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 FILE_TRAIN = 'data/sentences.train'
-FILE_TEST = 'data/sentences_test2.txt'
+FILE_TEST = 'data/sentences_test.txt'
 FILE_EVAL = 'data/sentences.eval'
 FILE_CONT = 'data/sentences.continuation'
 
